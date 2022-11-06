@@ -18,11 +18,20 @@ Reinforce iPhones starting from the first"iPhone" to "iPhone 14 Pro Max"
 
 **v0.1**
 
->first release
+>Airst release
 
-**v0.2** (current version)
+**v0.2**
 >Added succed percentage
 
 >Added README.md
 
 >Removed prefix *"rl"*
+
+**v0.3** (current version)
+>Added money
+
+>Added store
+
+>Added protection
+
+>Fixed little bugs
