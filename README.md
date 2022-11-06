@@ -2,7 +2,7 @@
 
 <h2>instruction</h2>
 
-Reinforce iPhones starting from the first"iPhone" to iPhone 14 Pro Max"
+Reinforce iPhones starting from the first"iPhone" to "iPhone 14 Pro Max"
 
 <h2>commands</h2>
 
