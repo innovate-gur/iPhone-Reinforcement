@@ -4,17 +4,14 @@
 
 Reinforce iPhones starting from the first"iPhone" to "iPhone 14 Pro Max"
 
-<h2>commands</h2>
+<h2>Version</h2>
 
-1. reinforce
+**Current version (v0.4)**
+>Added GUI using tkinter
 
-   ```go```
+>Deleted store (comming back in next update maybe)
 
-2. restart from the start
-
-   ```exit```
-
-<h2>Version</h2> 
+>Added selling system
 
 **v0.1**
 
@@ -27,7 +24,7 @@ Reinforce iPhones starting from the first"iPhone" to "iPhone 14 Pro Max"
 
 >Removed prefix *"rl"*
 
-**v0.3** (current version)
+**v0.3**
 >Added money
 
 >Added store
@@ -35,3 +32,10 @@ Reinforce iPhones starting from the first"iPhone" to "iPhone 14 Pro Max"
 >Added protection
 
 >Fixed little bugs
+
+**v0.4**
+>Added GUI using tkinter
+
+>Deleted store (comming back in next update maybe)
+
+>Added selling system

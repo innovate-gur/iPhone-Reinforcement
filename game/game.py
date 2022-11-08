@@ -1,6 +1,5 @@
 import sys
 import random
-import tkinter as tk
 
 
 class Iphone_Reinforcement(object):
@@ -47,53 +46,31 @@ class Iphone_Reinforcement(object):
         self.money = 0
         self.protection = 0
         self.protection_flag = False
-        self.iPhone_lable = tk.Label(text="f{}")
-        self.iPhone_lable.pack()
-    def Commanding(self, comm):
-        command = comm
-
-        var = command
-        if var == "go":
-            self.random_go(self.iPhones[self.current][2])
-            print(f"chance: {self.iPhones[self.current][2] * 100}%")
-        if var == "sell":
-            self.money += self.iPhones[self.current][3]
-            self.initialize()
-        if var == "protection":
-            self.protection_flag = True
-        if var == "store":
-            print("Welcome to the store, but anything you want")
-            print("|protection|: you can use this before you reinforce the iPhone and can protect you from Fails")
-            store_command = input()
-            if store_command == "exit":
-                return
-            if store_command == "protection":
-                self.protection += 1
-                print("purchased |protection|!")
-            
 
     def error(self, msg: str):
         print(msg)
         
-    def random_go(self, percentage: int):
+    def random_go(self, percentage: int, main_lable, sub_2_lable, sub_3_lable):
         if random.random() <= percentage:
             self.advance()
-            print("Succed")
-            print(f"current balance: {self.money}")
-            self.iPhone_lable["text"] =  f"{self.iPhones[self.current][0]}" #print(f"current: {self.iPhones[self.current][0]}")
+            main_lable["text"] = f"current: {self.iPhones[self.current][0]}"
+            sub_2_lable["text"] = "Suceed"
+            sub_3_lable["text"] = f"current balance: {self.money}"
+            
 
         else:
             if self.protection_flag:
                 self.protection -= 1
                 self.protection_flag = False
                 print("|protectoin| protected you from Fail, you can continue reinforceing!")
-                print(f"current balance: {self.money}")
-                print(f"current: {self.iPhones[self.current][0]}")
+                sub_3_lable["text"] = f"current balance: {self.money}"
+                main_lable["text"] = f"current: {self.iPhones[self.current][0]}"
             else:
                 self.withdraw()
-                print("Fail")
-                print(f"current balance: {self.money}")
-                self.iPhone_lable["text"] =  f"{self.iPhones[self.current][0]}" #print(f"current: {self.iPhones[self.current][0]}")
+                main_lable["text"] = f"current: {self.iPhones[self.current][0]}"
+                sub_2_lable["text"] = "Fail"
+                sub_3_lable["text"] = f"current balance: {self.money}"
+                
 
     def advance(self):
         self.current += 1 #self.iPhones[n+1]
@@ -104,34 +81,20 @@ class Iphone_Reinforcement(object):
         else:
             self.current -= 1 #self.iPhones[n-1]
             
-    def initialize(self):
+    def initialize(self, main_lable, sub_lable, sub_3_lable):
         self.current = 0
+        main_lable["text"] = f"current: {self.iPhones[self.current][0]}"
+
         print("Restarted")
-        self.iPhone_lable["text"] =  f"{self.iPhones[self.current][0]}" #print(f"current: {self.iPhones[self.current][0]}")
-        print(f"chance: {self.iPhones[self.current][2] * 100}%")
-        print(f"current balance: {self.money}")
+        sub_lable["text"] = f"chance: {self.iPhones[self.current][2] * 100}%"
+        sub_3_lable["text"] = f"current balance: {self.money}"
         print(f"number of protections: {self.protection}")
 
-if __name__ == "__main__":
+    
 
-    Win = tk.Tk()
-    Win.title("iPhone Reinforcement")
-    Win.resizable(width=False, height=False)
-    Win.geometry("500x400")
     
     
-    reinforce_btn = tk.Button(text="Reinforce", width=10, height=5)
-    store_btn = tk.Button(text="Reinforce", width=10, height=5)
-    reinforce_btn.pack()
-    store_btn.pack()
-    tk.mainloop()
     
-    App = Iphone_Reinforcement()
-    App.initialize()
-
-    while True:
-        command = str(input())
-        if command == "ir close":
-            sys.exit(0)
-        else:
-            App.Commanding(command)
+    
+    
+    
