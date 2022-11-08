@@ -1,5 +1,6 @@
 import sys
 import random
+import tkinter as tk
 
 class Iphone_Reinforcement(object):
     def __init__(self):
@@ -102,6 +103,12 @@ class Iphone_Reinforcement(object):
             self.current -= 1 #self.iPhones[n-1]
     
     def initialize(self):
+        Win = tk.Tk()
+        Win.title("iPhone Reinforcement")
+        Win.resizable(width=False, height=False)
+        Win.geometry("500x400")
+        self.reinforce_btn = tk.Button(text="Reinforce", width=10, height=5)
+        self.store_btn = tk.Button(text="Reinforce", width=10, height=5)
         self.current = 0
         print("Restarted")
         print(f"current: {self.iPhones[self.current][0]}")
@@ -112,11 +119,21 @@ class Iphone_Reinforcement(object):
     
 
 if __name__ == "__main__":
+
+    
+    
+    
+    
+
+    tk.mainloop()
+    
     App = Iphone_Reinforcement()
     
     App.initialize()
-    
-    while True:
+    App.reinforce_btn.pack()
+    App.store_btn.pack()
+       
+    while False:
         command = str(input())
         if command == "ir close":
             sys.exit(0)
