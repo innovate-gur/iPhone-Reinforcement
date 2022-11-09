@@ -6,16 +6,17 @@ Reinforce iPhones starting from the first"iPhone" to "iPhone 14 Pro Max"
 
 <h2>Version</h2>
 
-**Current version (v0.4)**
+**Current version (v0.4.1)**
 >Added GUI using tkinter
 
->Deleted store (comming back in next update maybe)
+>Upgraded store system
 
 >Added selling system
 
+>App not working currently!!
 **v0.1**
 
->Airst release
+>First release
 
 **v0.2**
 >Added succed percentage

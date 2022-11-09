@@ -5,7 +5,7 @@ import random
 class Iphone_Reinforcement(object):
     def __init__(self):
         self.iPhones = [
-            ["iPhone", "June 29, 2007", 1, 3],
+            ["iPhone", "June 29, 2007", 1, 0],
             ["iPhone 3G", "July 11, 2008", 0.95, 10],
             ["iPhone 3GS", "June 19, 2009", 0.93, 20],
             ["iPhone 4", "June 24, 2010", 0.90, 25],
